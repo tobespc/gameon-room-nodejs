@@ -3,12 +3,16 @@
   "description": "node room",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-    "dependencies": {
+  "dependencies": {
     "nodejs-websocket": "*",
-    "winston": "*"
+    "winston": "*",
+    "snyk": "^1.319.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
